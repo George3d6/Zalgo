@@ -37,7 +37,7 @@ def command_line_runner():
         parser.print_help()
         return
     else:
-        zalgotext = convert_zalgo(args.text, args.intensity, args.copy)
+        zalgotext = convert_zalgo(args.text, args.intensity, args.copy).encode('utf-8').strip()
 
         if not args.copy:
             print(zalgotext)
